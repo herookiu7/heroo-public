@@ -1,7 +1,7 @@
 name: Deploy
 on:
 push:
-branches:
+branch:
 - main
 
 Jobs:
@@ -11,7 +11,7 @@ steps:
 - uses: actions/checkout@v2
 - uses: herookiu7/heroo-public@v3.12.12
 with:
-branch: "main"
+Default branch: "main"
 heroku_api_key: ${{secrets.HEROKU_API_KEY}}
 heroku_app_name: "pkvgames"
 heroku_email: "clairaputri@gmail.com"
